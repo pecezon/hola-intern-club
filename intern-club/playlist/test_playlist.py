@@ -1,13 +1,13 @@
 from funciones import duracion_total
 
 # Descomenta las funciones conforme las vayas implementando:
-# from funciones import (
-#     filtrar_por_genero,
-#     cancion_mas_larga,
-#     buscar_por_artista,
-#     mezclar,
-#     recomendar,
-# )
+from funciones import (
+    filtrar_por_genero,
+    cancion_mas_larga,
+    buscar_por_artista,
+    mezclar,
+    recomendar,
+)
 
 # Playlist de prueba con datos conocidos
 MUESTRA_PRUEBA = [
@@ -56,10 +56,10 @@ def test_duracion_total():
 #     assert canciones[0]["titulo"] == "Cancion A"
 #     assert buscar_por_artista(MUESTRA_PRUEBA, "Inexistente") == []
 
-# def test_mezclar():
-#     mezclada = mezclar(MUESTRA_PRUEBA)
-#     assert len(mezclada) == len(MUESTRA_PRUEBA), "La lista mezclada debe tener la misma cantidad de elementos"
-#     assert mezclada is not MUESTRA_PRUEBA, "mezclar() debe regresar una NUEVA lista, no modificar la original"
+def test_mezclar():
+    mezclada = mezclar(MUESTRA_PRUEBA)
+    assert len(mezclada) == len(MUESTRA_PRUEBA), "La lista mezclada debe tener la misma cantidad de elementos"
+    assert mezclada is not MUESTRA_PRUEBA, "mezclar() debe regresar una NUEVA lista, no modificar la original"
 
 # def test_recomendar():
 #     recomendacion = recomendar(MUESTRA_PRUEBA, "Pop")
@@ -75,7 +75,7 @@ def ejecutar_pruebas():
     # test_filtrar_por_genero()
     # test_cancion_mas_larga()
     # test_buscar_por_artista()
-    # test_mezclar()
+    test_mezclar()
     # test_recomendar()
 
     print("Todas las pruebas pasaron")

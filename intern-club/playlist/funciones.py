@@ -68,7 +68,6 @@ def buscar_por_artista(playlist, artista):
     # TODO: tu codigo aqui
     pass
 
-
 def mezclar(playlist):
     """Regresa una nueva lista con las canciones en un orden aleatorio.
 
@@ -84,8 +83,8 @@ def mezclar(playlist):
         mezclar(PLAYLIST)
         -> [{'titulo': 'Rayando el Sol', ...}, {'titulo': 'De Musica Ligera', ...}, ...]
     """
-    # TODO: tu codigo aqui
-    pass
+    return random.sample(playlist, len(playlist))
+
 
 
 def recomendar(playlist, genero):
